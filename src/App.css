@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.menu {
+  background: rgb(200, 0, 60);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.menu__titulo {
+  width: 40vw;
+}
+
+.menu__logo {
+  width: 15vw;
+  height: 15vw;
+}
+
+.menu__btn {
+  list-style: none;
+  width: 25vw;
+  margin: .75vw;
+  padding: .75vw;
+  border: .2rem solid rgb(0, 200, 200);
+  text-align: center;
+  color: rgb(20, 20, 20);
+  font-weight: bold;
+  font-style: italic;
+}
