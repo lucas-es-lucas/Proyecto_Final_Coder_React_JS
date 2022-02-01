@@ -1,0 +1,15 @@
+.cart {
+     position: relative;
+     /* display: flex;
+     justify-content: center;
+     align-items: center; */
+     background-color: transparent;
+     border: none;
+     margin: 2vw;
+}
+
+.cart__icon {
+     color: rgb(200, 0, 60);
+     width: 2.5vw;
+     height: 2.5vw;
+}
