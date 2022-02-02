@@ -1,13 +1,13 @@
 .counter {
      position: absolute;
-     top: -1vh;
-     right: -1.5vw;
+     top: -1rem;
+     right: -1rem;
      background-color: rgb(250, 250, 250);
      color: rgb(200, 0, 60);
      font-weight: bold;
      border-radius: 50%;
-     width: 2vw;
-     height: 2vw;
+     width: 1.5rem;
+     height: 1.5rem;
      display: flex;
      justify-content: center;
      align-items: center;

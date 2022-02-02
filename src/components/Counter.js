@@ -2,9 +2,9 @@ import style from './Counter.module.css';
 
 const Counter = (props) => {
      return (
-          <>
-          <span className={style.counter}>{props.cant}</span>
-          </>
+          <div className={style.counter}>
+               <span>{props.cant}</span>
+          </div>
      )
 }
 
