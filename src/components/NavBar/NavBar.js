@@ -1,4 +1,4 @@
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import styles from './NavBar.module.css';
 
 const NavBar = (props) => {

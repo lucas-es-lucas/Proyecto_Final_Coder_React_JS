@@ -1,6 +1,6 @@
 import style from './CartWidget.module.css';
 import { FiShoppingCart } from 'react-icons/fi';
-import Counter from './Counter';
+import Counter from '../Counter/Counter';
 
 const CartWidget = (props) => {
      return (
