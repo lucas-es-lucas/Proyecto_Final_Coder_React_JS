@@ -6,11 +6,11 @@ const Item = (props) => {
           <>
           <article className={styles.comic__container}>
                <div className={styles.comic__cover}>
-               <img src={props.cover} width={props.cover_size} alt='cover'></img>
+               <img src={props.pictureUrl} width={props.cover_size} alt='cover'></img>
                     <h3>{props.title}</h3>
                </div>
                <div className={styles.comic__info}>
-                    <p>Editorial: {props.editorial}</p>
+                    <p>Editorial: {props.description}</p>
                     <h5>$ {props.price}</h5>
                     <p>Ejemplares disponibles {props.stock}</p>
                </div>

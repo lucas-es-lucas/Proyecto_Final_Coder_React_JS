@@ -1,113 +1,102 @@
 const comics = [
      {
           "id": 0,
-          "id_comic": 550988,
           "title": 'TDKR',
-          "editorial": 'Norma',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Norma',
+          "price": 13000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 5,
-          "price": 13000
+          "stock": 5
      },
      {
           "id": 1,
-          "id_comic": 568620,
           "title": 'Watchmen',
-          "editorial": 'Planeta',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Planeta',
+          "price": 20000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 8,
-          "price": 20000 
+          "stock": 8
      },
      {
           "id": 2,
-          "id_comic": 580489,
           "title": 'From Hell',
-          "editorial": 'Planeta',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Planeta',
+          "price": 18000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 8,
-          "price": 18000 
+          "stock": 8
      },
      {
           "id": 3,
-          "id_comic": 566525,
           "title": 'The Invisibles 3',
-          "editorial": 'Vertigo',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Vertigo',
+          "price": 3700,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 3,
-          "price": 3700 
+          "stock": 3
      },
      {
           "id": 4,
-          "id_comic": 597316,
           "title": 'Gideon Falls 16',
-          "editorial": 'Image',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Image',
+          "price": 1100,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 3,
-          "price": 1100
+          "stock": 3
      },
      {
           "id": 5,
-          "id_comic": 859860,
           "title": 'Cosmic Odissey',
-          "editorial": 'ECC',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'ECC',
+          "price": 5000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 2,
-          "price": 5000 
+          "stock": 2
      },
      {
           "id": 6,
-          "id_comic": 588921,
           "title": 'Black Monday Murders 2',
-          "editorial": 'Image',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Image',
+          "price": 2500,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 2,
-          "price": 2500
+          "stock": 2
      },
      {
           "id": 7,
-          "id_comic": 725273,
           "title": 'Monsters',
-          "editorial": 'Fantagraphics',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Fantagraphics',
+          "price": 8000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 6,
-          "price": 8000 
+          "stock": 6
      },
      {
           "id": 8,
-          "id_comic": 597891,
           "title": 'Monster 13',
-          "editorial": 'Ivrea',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Ivrea',
+          "price": 900,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 6,
-          "price": 900 
+          "stock": 6
      },
      {
           "id": 9,
-          "id_comic": 451048,
           "title": 'Evangelion Completo',
-          "editorial": 'Ivrea',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Ivrea',
+          "price": 30000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 1,
-          "price": 30000 
+          "stock": 1
      },
      {
           "id": 10,
-          "id_comic": 385128,
           "title": 'El Incal',
-          "editorial": 'Norma',
-          "cover": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
+          "description": 'Norma',
+          "price": 15000,
+          "pictureUrl": 'https://comicbooksandcats.files.wordpress.com/2015/11/the-dark-knight-returns-1-cover.png',
           "cover_size": '100px',
-          "stock": 1,
-          "price": 15000
+          "stock": 1
      },
 ];
 
