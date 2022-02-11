@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget/CartWidget';
 import styles from './NavBar.module.css';
 
@@ -16,19 +17,19 @@ const NavBar = (props) => {
                          aria-label="Toggle navigation">
                          <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" className={styles.navbar__brand} href="/">
-                    <img className={styles.navbar__brand__img} src={props.logo} alt={props.alt}></img>LIMITED EDITION
-                    </a>
+                    <Link to={'/'} className={styles.navbar__brand}>
+                         <img className={styles.navbar__brand__img} src={props.logo} alt={props.alt}></img>LIMITED EDITION
+                    </Link>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                               <li className="nav-item">
-                                   <a className={styles.nav__link} href="/">Americanos</a>
+                                   <Link to={'/category/0'} className={styles.nav__link}>AMERICANOS</Link>
                               </li>
                               <li className="nav-item">
-                                   <a className={styles.nav__link} href="/">Europeos</a>
+                                   <Link to={'/category/1'} className={styles.nav__link}>EUROPEOS</Link>
                               </li>
                               <li className="nav-item">
-                                   <a className={styles.nav__link} href="/">Mangas</a>
+                                   <Link to={'/category/2'} className={styles.nav__link}>MANGAS</Link>
                               </li>
                          </ul>
                     </div>
