@@ -17,7 +17,7 @@ const NavBar = (props) => {
                          aria-label="Toggle navigation">
                          <span className="navbar-toggler-icon"></span>
                     </button>
-                    <Link to={'/'} className={styles.navbar__brand}>
+                    <Link to={'/'} className={`{styles.navbar__brand ${'nav-bar'}}`}>
                          <img className={styles.navbar__brand__img} src={props.logo} alt={props.alt}></img>LIMITED EDITION
                     </Link>
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">

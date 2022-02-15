@@ -17,7 +17,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
      }
 
      const addItem = () => {
-          alert(`Vas a agregar ${cant} unidades al carrito`);
+          alert(`${cant} units were added to your cart!`);
           onAdd = cant;
           // console.log(onAdd);
           setCant(initial);
@@ -33,7 +33,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <button className={styles.controls__btn} onClick={() => countItem('-')}>-</button>
                </div>
                <div>
-                    <button className={styles.add} onClick={addItem}>Lo quiero!</button>
+                    <button className={styles.add} onClick={addItem}>Grab it!</button>
                </div>
           </div>
           </>

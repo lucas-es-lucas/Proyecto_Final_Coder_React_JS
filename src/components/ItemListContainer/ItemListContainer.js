@@ -31,7 +31,7 @@ const ItemListContainer = (props) => {
      <>
           <section className={styles.catalogue__container}>
                <h3 className = {styles.greeting}>{props.greeting}</h3>
-               {loading ? <img className={styles.img__loading} src='https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif' alt='Buscando novedades...'></img> : 
+               {loading ? <img src='https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif' alt='Buscando novedades...'></img> : 
                <ItemList items={items}></ItemList>}
           </section>
 

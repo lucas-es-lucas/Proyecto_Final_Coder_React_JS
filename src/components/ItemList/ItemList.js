@@ -9,7 +9,7 @@ const ItemList = (props) => {
                <Item
                     key={item.id}
                     title={item.title}
-                    description={item.description}
+                    editorial={item.editorial}
                     price={item.price}
                     pictureUrl={item.pictureUrl}
                     cover_size={item.cover_size}

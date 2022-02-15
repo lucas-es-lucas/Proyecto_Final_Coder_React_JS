@@ -10,9 +10,9 @@ const Item = (props) => {
                     <h3>{props.title}</h3>
                </div>
                <div className={styles.comic__info}>
-                    <p>Editorial: {props.description}</p>
+                    <p>Editorial: {props.editorial}</p>
                     <h5>$ {props.price}</h5>
-                    <p>Ejemplares disponibles {props.stock}</p>
+                    <p>Available units {props.stock}</p>
                </div>
                <div className={styles.comic__cart}>
                     <ItemCount stock={props.stock} initial={1}></ItemCount>
