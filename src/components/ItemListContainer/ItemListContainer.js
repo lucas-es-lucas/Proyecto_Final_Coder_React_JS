@@ -10,9 +10,6 @@ const ItemListContainer = (props) => {
      const [loading, setLoading] = useState(true);
      const urlParams = useParams();
 
-     console.log(urlParams.idCategory);
-     // console.log(idCategory);
-
      useEffect(() => {
           if (urlParams.idCategory === undefined) {
                customFetch(2000, comics)
@@ -34,7 +31,6 @@ const ItemListContainer = (props) => {
                {loading ? <img src='https://media.giphy.com/media/tXL4FHPSnVJ0A/giphy.gif' alt='Buscando novedades...'></img> : 
                <ItemList items={items}></ItemList>}
           </section>
-
      </>
      );
 }

@@ -10,8 +10,6 @@ const ItemDetailContainer = () => {
      const [loading, setLoading] = useState(true);
      const urlParams = useParams();
 
-     console.log(urlParams.idItem);
-
      useEffect(() => {
           customFetch(2000, comics.find(item => (item.id === parseInt(urlParams.idItem))))
           .then((response) => setItem(response))
