@@ -1,0 +1,13 @@
+.checkout__btn {
+     margin: .5rem;
+     border-radius: 5%;
+     background-color: rgb(120, 191, 214);
+     font-weight: bold;
+}
+
+.checkout__link {
+     text-decoration: none;
+     font-family: 'Courier New', Courier, monospace;
+     color: black;
+     font-weight: bold;
+}

@@ -1,5 +1,5 @@
 import styles from './Item.module.css';
-import ItemCount from "../ItemCount/ItemCount";
+// import ItemCount from "../ItemCount/ItemCount";
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {

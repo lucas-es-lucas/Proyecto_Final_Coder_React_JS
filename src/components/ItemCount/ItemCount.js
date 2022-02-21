@@ -15,11 +15,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                }
           };
      }
-
-     // const addItem = () => {
-     //      alert(`${cant} units were added to your cart!`);
-     //      onAdd = cant;
-     //      setCant(initial);
+     // No necesito validar porque Initial es 1
+     // const addItem = (cant) => {
+     //      if (cant > 0) {
+     //           return onAdd(cant);
+     //      }
      // }
 
      return (
@@ -31,6 +31,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <button className={styles.controls__btn} onClick={() => countItem('-')}>-</button>
                </div>
                <div>
+                    {/* <button className={styles.add} onClick={() => addItem(cant)}>Grab it!</button> */}
                     <button className={styles.add} onClick={() => onAdd(cant)}>Grab it!</button>
                </div>
           </div>

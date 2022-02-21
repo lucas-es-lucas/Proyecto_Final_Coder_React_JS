@@ -4,12 +4,16 @@ import Checkout from '../Checkout/Checkout';
 import { useState } from 'react';
 
 const ItemDetail = ({item}) => {
-     const [itemQuantity, setItemQuantity] = useState(0);
+     const [itemQuantity, setItemQuantity] = useState(1);
+     const [isCheckout, setIsCheckout] = useState(false);
+
+     console.log(isCheckout);
 
      const onAdd = (cantidad) => {
           alert(`${cantidad} units were added to your cart! ITEM DETAIL`);
           console.log(cantidad);
           setItemQuantity(cantidad);
+          setIsCheckout(true);
      }
      return (
           <>
@@ -24,10 +28,10 @@ const ItemDetail = ({item}) => {
                     <p>Available units<strong> {item.stock}</strong></p><p></p>
                </div>
                <div className={styles.comic__cart}>
-                    {itemQuantity === 0 ?
-                    <ItemCount stock={item.stock} initial={itemQuantity} onAdd={onAdd}></ItemCount>
+                    {isCheckout ?
+                    <Checkout cantidad={itemQuantity}></Checkout>
                     :
-                    <Checkout /* cantidad={itemQuantity} */></Checkout>}
+                    <ItemCount stock={item.stock} initial={itemQuantity} onAdd={onAdd}></ItemCount>}
                </div>
           </article>
           </>
