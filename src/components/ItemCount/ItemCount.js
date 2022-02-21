@@ -16,24 +16,22 @@ const ItemCount = ({stock, initial, onAdd}) => {
           };
      }
 
-     const addItem = () => {
-          alert(`${cant} units were added to your cart!`);
-          onAdd = cant;
-          // console.log(onAdd);
-          setCant(initial);
-     }
+     // const addItem = () => {
+     //      alert(`${cant} units were added to your cart!`);
+     //      onAdd = cant;
+     //      setCant(initial);
+     // }
 
      return (
           <>
           <div className={styles.container}>
-               {/* <p className={styles.name}>Ejemplares disponibles: {stock}</p> */}
                <div className={styles.controls}>
                     <button className={styles.controls__btn} onClick={() => countItem('+')}>+</button>
                     <div>{cant}</div>
                     <button className={styles.controls__btn} onClick={() => countItem('-')}>-</button>
                </div>
                <div>
-                    <button className={styles.add} onClick={addItem}>Grab it!</button>
+                    <button className={styles.add} onClick={() => onAdd(cant)}>Grab it!</button>
                </div>
           </div>
           </>

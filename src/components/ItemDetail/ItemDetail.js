@@ -1,7 +1,16 @@
 import styles from './ItemDetail.module.css';
 import ItemCount from '../ItemCount/ItemCount';
+import Checkout from '../Checkout/Checkout';
+import { useState } from 'react';
 
 const ItemDetail = ({item}) => {
+     const [itemQuantity, setItemQuantity] = useState(0);
+
+     const onAdd = (cantidad) => {
+          alert(`${cantidad} units were added to your cart! ITEM DETAIL`);
+          console.log(cantidad);
+          setItemQuantity(cantidad);
+     }
      return (
           <>
           <article className={styles.comic__container}>
@@ -15,7 +24,10 @@ const ItemDetail = ({item}) => {
                     <p>Available units<strong> {item.stock}</strong></p><p></p>
                </div>
                <div className={styles.comic__cart}>
-                    <ItemCount stock={item.stock} initial={1}></ItemCount>
+                    {itemQuantity === 0 ?
+                    <ItemCount stock={item.stock} initial={itemQuantity} onAdd={onAdd}></ItemCount>
+                    :
+                    <Checkout /* cantidad={itemQuantity} */></Checkout>}
                </div>
           </article>
           </>
