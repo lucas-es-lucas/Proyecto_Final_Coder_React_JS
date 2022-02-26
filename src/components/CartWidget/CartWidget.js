@@ -13,7 +13,11 @@ const CartWidget = (props) => {
           <>
           <button className={style.cart}>
                <FiShoppingCart className={style.cart__icon} />
-               <Counter cant={props.cant} />
+               {
+                    cartList.total_quantity() > 0 &&
+                    <Counter cant={cartList.total_quantity()} />
+               }
+               
           </button>
           </>
      );
