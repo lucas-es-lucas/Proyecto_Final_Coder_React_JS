@@ -13,7 +13,9 @@ const CartContextProvider = ({children}) => {
                          products.qty += quantity;
                     }
                }
-               setCartList(cartList);
+               // console.log('antes', cartList);
+               setCartList([...cartList]);
+               // console.log('después', cartList);
           } else {
                setCartList([
                     ...cartList,   //spread: agrega al contenido existente
@@ -27,6 +29,8 @@ const CartContextProvider = ({children}) => {
                     }
                ]);
           }
+
+          // setCartList(cartList);
      }
      // eliminar del carrito
      const removeItem = (idProduct) => {
