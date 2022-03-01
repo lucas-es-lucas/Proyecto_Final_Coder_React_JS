@@ -3,9 +3,9 @@ import styles from './ItemListContainer.module.css';
 import customFetch from '../../utils/customFetch';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-const {comics} = require('../../utils/comics');
 // import { collection, getDocs } from "firebase/firestore"; 
 // import db from '../../utils/firebaseConfig';
+const {comics} = require('../../utils/comics');
 
 const ItemListContainer = (props) => {
      const [items, setItems] = useState([]);
