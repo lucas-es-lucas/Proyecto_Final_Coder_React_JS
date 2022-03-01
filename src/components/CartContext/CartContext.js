@@ -13,13 +13,11 @@ const CartContextProvider = ({children}) => {
                          products.qty += quantity;
                     }
                }
-               // ??? hay que actualizar el estado para refrescar el CartWidget
-               // setCartList([cartList]);
+               setCartList(cartList);
           } else {
                setCartList([
                     ...cartList,   //spread: agrega al contenido existente
                     {
-                         // key: item.id,
                          id: item.id,
                          image: item.pictureUrl,
                          image_size: item.cover_size,
@@ -29,7 +27,6 @@ const CartContextProvider = ({children}) => {
                     }
                ]);
           }
-          console.log(cartList);
      }
      // eliminar del carrito
      const removeItem = (idProduct) => {
@@ -43,23 +40,23 @@ const CartContextProvider = ({children}) => {
      const isInCart = (idProduct) => {
           return cartList.find((item) => item.id === idProduct) ? true : false;
      }
-     // totales para mostrar en el carrito
+     // totales (cantidades) para mostrar en el carrito
      const total_quantity = () => {
           let total = 0;
 
           for (const products of cartList) {
                total = total + products.qty;
-               console.log(total);
+               // console.log(total);
           }
           return total;
      }
-     // REVISAR CALCULA MALLL
+     // totales (importes) para mostrar en el carrito
      const total_cost = () => {
           let total = 0;
           
           for (const products of cartList) {
                total = total + (products.price * products.qty);
-               console.log(total);
+               // console.log(total);
           }
           return total;
      }

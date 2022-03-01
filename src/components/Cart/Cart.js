@@ -45,7 +45,6 @@ const Cart = () => {
                               <h4 className={styles.cart__item__title}>{item.name}</h4>
                               <p className={styles.cart__item__info}>{item.qty}</p>
                               <p className={styles.cart__item__info}>{item.price}</p>
-                              {/* <p className={styles.cart__item__info}>{item.price * item.qty}</p> */}
                               <p className={styles.cart__item__info}>{item.price * item.qty}</p>
                               <button onClick={() => cartList.removeItem(item.id)}>Delete</button>
                          </article>
@@ -64,7 +63,6 @@ const Cart = () => {
                          </article>
                          : <h3> </h3>
                     }
-
                </section>
                <section>
                     {
