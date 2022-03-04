@@ -73,6 +73,7 @@ const Cart = () => {
                               <Link to='/'>Back to Catalogue</Link>
                               </button>
                               <button className={styles.cart__btn} onClick={cartList.clear}>Empty Cart</button>
+                              <button className={styles.cart__btn} onClick={cartList.createOrder}>Buy 'em All!</button>
                          </article>
                          : <h3> </h3>
                     }
