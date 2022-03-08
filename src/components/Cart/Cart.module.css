@@ -36,3 +36,34 @@
 .cart__item__cart {
      width: 100%;
 }
+
+.cart__btn__back {
+     margin: .5rem;
+     border-radius: 5%;
+     background-color: rgb(120, 191, 214);
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+}
+
+.cart__link__back {
+     text-decoration: none;
+     color: black;
+}
+
+.cart__btn__empty {
+     margin: .5rem;
+     border-radius: 5%;
+     background-color: rgb(255, 0, 0);
+     color: black;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+}
+
+.cart__btn__buy {
+     margin: .5rem;
+     border-radius: 5%;
+     background-color: rgb(0, 172, 14);
+     color: black;
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: bold;
+}

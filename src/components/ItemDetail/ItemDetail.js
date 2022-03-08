@@ -8,12 +8,9 @@ const ItemDetail = ({item}) => {
      const [itemQuantity, setItemQuantity] = useState(1);
      const [isCheckout, setIsCheckout] = useState(false);
      const cartList = useContext(CartContext);
-
-     // console.log(isCheckout);
-
+     
      const onAdd = (quantity) => {
-          alert(`${quantity} units were added to your cart! ITEM DETAIL`);
-          // console.log(quantity);
+          alert(`${quantity} units were added to your cart!`);
           setItemQuantity(quantity);
           cartList.addItem(item, quantity);
           setIsCheckout(true);

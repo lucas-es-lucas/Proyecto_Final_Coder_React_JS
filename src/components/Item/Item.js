@@ -1,5 +1,4 @@
 import styles from './Item.module.css';
-// import ItemCount from "../ItemCount/ItemCount";
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
@@ -17,9 +16,6 @@ const Item = (props) => {
                     <h5>$ {props.price}</h5>
                     <p>Available units <strong> {props.stock}</strong></p>
                </div>
-               {/* <div className={styles.comic__cart}>
-                    <ItemCount stock={props.stock} initial={1}></ItemCount>
-               </div> */}
           </article>
           </>
      );

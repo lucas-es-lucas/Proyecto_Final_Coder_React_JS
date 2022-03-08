@@ -1,4 +1,4 @@
-import { collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import db from "../../utils/firebaseConfig";
 
 const { createContext, useState } = require("react");
@@ -64,43 +64,44 @@ const CartContextProvider = ({children}) => {
           }
           return total;
      }
-          // finalizar compra
-          const createOrder = () => {
-               let order = {
-                    buyer: {
-                         name: 'Lucas es Lucas',
-                         email: 'midireccioneslucas@hotmail.com',
-                         phone: '1122334455'
-                    },
-                    items: cartList.map((it) => {
-                         return {id: it.id, price: it.price, title: it.name, qty: it.qty}
-                    }),
-                    date: serverTimestamp(),
-                    total: total_cost()
-               };
-               console.log(order);
-     
-               const createOrderInFirestore = async () => {
-                    const newOrderInFirestore = doc(collection(db, 'orders'));
-                    await setDoc(newOrderInFirestore, order);
-                    return newOrderInFirestore;
-               };
-     
-               createOrderInFirestore()
-                    .then((result) => {
-                         // alert(`Compraste ${result.id}`);
-                         alert('Gracias por tu compra!');
-                         // REVISAR - FALLA EL MAPEO
-                         // cartList.cartList.map(async (item) => {
-                         //      const itemRef = doc(db, 'comics', item.idItem);
-                         //      await updateDoc(itemRef, {
-                         //           stock: increment(-item.qty)
-                         //      });
-                         // });
-                         clear();
-                    })
-                    .catch((error) => console.log(error));
+     // finalizar compra
+     const createOrder = () => {
+          let order = {
+               buyer: {
+                    name: 'Lucas es Lucas',
+                    email: 'midireccioneslucas@hotmail.com',
+                    phone: '1122334455'
+               },
+               items: cartList.map((it) => {
+                    return {id: it.id, price: it.price, title: it.name, qty: it.qty}
+               }),
+               date: serverTimestamp(),
+               total: total_cost()
           };
+          console.log(order);
+
+          const createOrderInFirestore = async () => {
+               // agrega el document con un Auto-Id
+               const newOrderInFirestore = doc(collection(db, 'orders'));
+               // usa el Auto-Id generado para agregar los datos al document
+               await setDoc(newOrderInFirestore, order);
+               return newOrderInFirestore;
+          };
+
+          createOrderInFirestore()
+          // el contenido del .THEN va entre {} porque se ejecuta más de 1 línea
+               .then((result) => {
+                    alert(`Thank U! Your order code is: ${result.id}`);
+                    cartList.map(async (item) => {
+                         const itemRef = doc(db, 'comics', item.id);
+                         await updateDoc(itemRef, {
+                              stock: increment(-item.qty)
+                         });
+                    });
+                    clear();
+               })
+               .catch((error) => console.log(error));
+     };
 
      return (
           // value: todo lo que está compartido (es un objeto con estados y funciones)

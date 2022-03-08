@@ -11,13 +11,13 @@ const Cart = () => {
                <section>
                     <h1>This is your cart!</h1>
                     <article className={styles.cart__item__container}>
-                         <button className={styles.cart__btn}>
-                         <Link to='/'>Back to Catalogue</Link>
+                         <button className={styles.cart__btn__back}>
+                         <Link to='/' className={styles.cart__link__back}>Back to Catalogue</Link>
                          </button>
                          {
                               (cartList.cartList.length > 0)
-                              ? <button className={styles.cart__btn} onClick={cartList.clear}>Empty Cart</button>
-                              : <h5>Your cart is empty :(</h5>
+                              ? <button className={styles.cart__btn__empty} onClick={cartList.clear}>Empty Cart</button>
+                              : <h5>Your cart is empty :/</h5>
                          }
                     </article>
                     {
@@ -64,20 +64,18 @@ const Cart = () => {
                          : <h3> </h3>
                     }
                </section>
-               <section>
-                    {
-                         (cartList.cartList.length > 0)
-                         ?
+               {
+                    (cartList.cartList.length > 0)
+                    ?
+                    <section>
                          <article className={styles.cart__item__container}>
-                              <button className={styles.cart__btn}>
-                              <Link to='/'>Back to Catalogue</Link>
-                              </button>
-                              <button className={styles.cart__btn} onClick={cartList.clear}>Empty Cart</button>
-                              <button className={styles.cart__btn} onClick={cartList.createOrder}>Buy 'em All!</button>
+                              <button className={styles.cart__btn__back}><Link to='/' className={styles.cart__link__back}>Back to Catalogue</Link></button>
+                              <button className={styles.cart__btn__buy} onClick={cartList.createOrder}>Buy 'em All!</button>
+                              <button className={styles.cart__btn__empty} onClick={cartList.clear}>Empty Cart</button>
                          </article>
-                         : <h3> </h3>
-                    }
-               </section>
+                    </section>
+                    : <h3> </h3>
+               }
           </>
      )
 }

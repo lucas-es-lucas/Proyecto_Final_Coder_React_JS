@@ -5,7 +5,6 @@ const Checkout = (props) => {
      return (
           <>
                <button className={styles.checkout__btn}>
-                    {/* <Link to='/cart'>{`Ir al Carrito ${props.cantidad}`}</Link> */}
                     <Link to='/cart' className={styles.checkout__link}>Checkout</Link>
                </button>
           </>
