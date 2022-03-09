@@ -23,10 +23,10 @@ const NavBar = (props) => {
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                               <li className="nav-item">
-                                   <Link to={'/category/0'} className={styles.nav__link}>AMERICANOS</Link>
+                                   <Link to={'/category/0'} className={styles.nav__link}>AMERICANS</Link>
                               </li>
                               <li className="nav-item">
-                                   <Link to={'/category/1'} className={styles.nav__link}>EUROPEOS</Link>
+                                   <Link to={'/category/1'} className={styles.nav__link}>EUROPEANS</Link>
                               </li>
                               <li className="nav-item">
                                    <Link to={'/category/2'} className={styles.nav__link}>MANGAS</Link>
