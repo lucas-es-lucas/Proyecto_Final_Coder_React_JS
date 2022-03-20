@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import styles from './ItemCount.module.css';
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -15,23 +16,19 @@ const ItemCount = ({stock, initial, onAdd}) => {
                }
           };
      }
-     // No necesito validar porque Initial es 1
-     // const addItem = (cant) => {
-     //      if (cant > 0) {
-     //           return onAdd(cant);
-     //      }
-     // }
 
      return (
           <>
           <div className={styles.container}>
                <div className={styles.controls}>
-                    <button className={styles.controls__btn} onClick={() => countItem('+')}>+</button>
-                    <div>{cant}</div>
                     <button className={styles.controls__btn} onClick={() => countItem('-')}>-</button>
+                    <div>{cant}</div>
+                    <button className={styles.controls__btn} onClick={() => countItem('+')}>+</button>
                </div>
                <div>
-                    {/* <button className={styles.add} onClick={() => addItem(cant)}>Grab it!</button> */}
+                    <button className={styles.back}>
+                         <Link to='/' className={styles.link__back}>Back to Catalogue</Link>
+                    </button>
                     <button className={styles.add} onClick={() => onAdd(cant)}>Grab it!</button>
                </div>
           </div>

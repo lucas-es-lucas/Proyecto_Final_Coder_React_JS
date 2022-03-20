@@ -40,6 +40,7 @@
 .cart__btn__back {
      margin: .5rem;
      border-radius: 5%;
+     width: 20%;
      background-color: rgb(120, 191, 214);
      font-family: 'Courier New', Courier, monospace;
      font-weight: bold;
@@ -53,6 +54,7 @@
 .cart__btn__empty {
      margin: .5rem;
      border-radius: 5%;
+     width: 20%;
      background-color: rgb(255, 0, 0);
      color: black;
      font-family: 'Courier New', Courier, monospace;
@@ -62,6 +64,7 @@
 .cart__btn__buy {
      margin: .5rem;
      border-radius: 5%;
+     width: 20%;
      background-color: rgb(0, 172, 14);
      color: black;
      font-family: 'Courier New', Courier, monospace;

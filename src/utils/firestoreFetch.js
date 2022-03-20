@@ -30,7 +30,6 @@ export const firestoreFetchSome = async (field, idField) => {
 }
 
 export const firestoreFetchOne = async (idItem) => {
-     // console.log(idItem);
      const docRef = doc(db, "comics", idItem);
      const docSnap = await getDoc(docRef);
 
@@ -39,7 +38,5 @@ export const firestoreFetchOne = async (idItem) => {
                id: idItem,
                ...docSnap.data()
           }
-     } else {
-          console.log('No se encontró el producto');
      }
 }

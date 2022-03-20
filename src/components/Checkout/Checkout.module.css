@@ -1,6 +1,7 @@
 .checkout__btn {
      margin: .5rem;
      border-radius: 5%;
+     width: 20%;
      background-color: rgb(120, 191, 214);
      font-weight: bold;
 }

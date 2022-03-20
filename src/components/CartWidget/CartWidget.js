@@ -7,8 +7,6 @@ import { CartContext } from '../CartContext/CartContext';
 const CartWidget = (props) => {
      const cartList = useContext(CartContext);
 
-     console.log(cartList);
-
      return (
           <>
           <button className={style.cart}>

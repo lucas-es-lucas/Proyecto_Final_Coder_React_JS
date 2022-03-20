@@ -50,7 +50,6 @@ const CartContextProvider = ({children}) => {
 
           for (const products of cartList) {
                total = total + products.qty;
-               // console.log(total);
           }
           return total;
      }
@@ -60,7 +59,6 @@ const CartContextProvider = ({children}) => {
           
           for (const products of cartList) {
                total = total + (products.price * products.qty);
-               // console.log(total);
           }
           return total;
      }
@@ -78,7 +76,6 @@ const CartContextProvider = ({children}) => {
                date: serverTimestamp(),
                total: total_cost()
           };
-          console.log(order);
 
           const createOrderInFirestore = async () => {
                // agrega el document con un Auto-Id

@@ -9,6 +9,15 @@
      padding: .5rem;
 }
 
+.comic__link {
+     text-decoration: none;
+     color: black;
+}
+
+.comic__link:hover {
+     color: rgb(200, 0, 0);
+}
+
 .comic__cover {
      display: flex;
      flex-direction: column;
