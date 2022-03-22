@@ -11,12 +11,12 @@ const Cart = () => {
                <section>
                     <h1>This is your cart!</h1>
                     <article className={styles.cart__item__container}>
-                         <button className={styles.cart__btn__back}>
-                         <Link to='/' className={styles.cart__link__back}>Back to Catalogue</Link>
-                         </button>
+                         <div className={styles.cart__btn__back}>
+                         <Link to='/' className={`btn btn-info ${styles.cart__link__back}`}>Back to Catalogue</Link>
+                         </div>
                          {
                               (cartList.cartList.length > 0)
-                              ? <button className={styles.cart__btn__empty} onClick={cartList.clear}>Empty Cart</button>
+                              ? <div className={`btn btn-danger col-2 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
                               : <h5>Your cart is empty :/</h5>
                          }
                     </article>
@@ -69,9 +69,11 @@ const Cart = () => {
                     ?
                     <section>
                          <article className={styles.cart__item__container}>
-                              <button className={styles.cart__btn__back}><Link to='/' className={styles.cart__link__back}>Back to Catalogue</Link></button>
-                              <button className={styles.cart__btn__buy} onClick={cartList.createOrder}>Buy 'em All!</button>
-                              <button className={styles.cart__btn__empty} onClick={cartList.clear}>Empty Cart</button>
+                              <div className={styles.cart__btn__back}>
+                              <Link to='/' className={`btn btn-info ${styles.cart__link__back}`}>Back to Catalogue</Link>
+                              </div>
+                              <div className={`btn btn-success col-2 ${styles.cart__btn__buy}`} onClick={cartList.createOrder}>Buy 'em All!</div>
+                              <div className={`btn btn-danger col-2 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
                          </article>
                     </section>
                     : <h3> </h3>

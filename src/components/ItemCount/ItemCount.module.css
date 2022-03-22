@@ -1,6 +1,5 @@
 .container {
      text-align: center;
-     /* border: .2rem solid gray; */
 }
 
 .name {
@@ -8,7 +7,6 @@
 }
 
 .controls {
-     /* border: .1rem solid gray; */
      color: black;
      font-weight: bolder;
      display: flex;
@@ -32,23 +30,19 @@
 }
 
 .add {
-     margin: .5rem;
-     border-radius: 5%;
-     width: 20%;
-     background-color: rgb(0, 172, 14);
      color: black;
      font-family: 'Courier New', Courier, monospace;
-     font-weight: bold;
+     font-weight: bolder;
+}
+
+.add:hover {
+     color: black;
 }
 
 .back {
-     margin: .5rem;
-     border-radius: 5%;
-     width: 20%;
-     background-color: rgb(120, 191, 214);
      color: black;
      font-family: 'Courier New', Courier, monospace;
-     font-weight: bold;
+     font-weight: bolder;
 }
 
 .link__back {

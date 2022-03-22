@@ -6,23 +6,28 @@ const Item = (props) => {
 
      return (
           <>
-          <article className={styles.comic__container}>
-               <Link to={`/item/${props.id}`} className={styles.comic__link}>
-                    <div className={styles.comic__cover}>
-                         <img src={props.pictureUrl} width={props.cover_size} alt='cover'></img>
+          <article className='col-6 col-md-4 col-lg-3 col-xl-2 p-1 mx-1 my-3'>
+               <div className='card'>
+                    <Link to={`/item/${props.id}`}>
+                         <img className='card-img-top' src={props.pictureUrl} width={props.cover_size} alt='cover'></img>
+                    </Link>
+                    <div className='card-body'>
+                         <h5 className='card-title'>{props.title}</h5>
+                         <div className='card-text'>
+                              <p>{props.editorial}</p>
+                              <p>$ {props.price}</p>
+                              {
+                                   (isInStock)
+                                   ?
+                                   <p>Available units <strong> {props.stock}</strong></p>
+                                   : <p><strong>Not Available</strong></p>
+                              }
+                         </div>
+                         <div className={`card-bottom ${styles.comic__link}`}>
+                              <Link className={`btn btn-dark ${styles.comic__link}`} to={`/item/${props.id}`}>See the precious</Link>
+                         </div>
                     </div>
-                    <h3>{props.title}</h3>
-                    <div className={styles.comic__info}>
-                         <p>Editorial: {props.editorial}</p>
-                         <h5>$ {props.price}</h5>
-                         {
-                              (isInStock)
-                              ?
-                              <p>Available units <strong> {props.stock}</strong></p>
-                              : <p><strong>Not Available</strong></p>
-                         }
-                    </div>
-               </Link>
+               </div>
           </article>
           </>
      );

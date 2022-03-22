@@ -25,11 +25,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                     <div>{cant}</div>
                     <button className={styles.controls__btn} onClick={() => countItem('+')}>+</button>
                </div>
-               <div>
-                    <button className={styles.back}>
-                         <Link to='/' className={styles.link__back}>Back to Catalogue</Link>
-                    </button>
-                    <button className={styles.add} onClick={() => onAdd(cant)}>Grab it!</button>
+               <div className={`row`}>
+                    <div>
+                         <Link to='/' className={`btn btn-info col-4 m-2' ${styles.back}`}>Back to Catalogue</Link>
+                         <div className={`btn btn-success col-4 m-2 ${styles.add}`} onClick={() => onAdd(cant)}>Grab it!</div>
+                    </div>
                </div>
           </div>
           </>

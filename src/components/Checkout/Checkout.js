@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 const Checkout = (props) => {
      return (
           <>
-               <button className={styles.checkout__btn}>
-                    <Link to='/cart' className={styles.checkout__link}>Checkout</Link>
-               </button>
+               <div className={`row`}>
+                    <div>
+                         <Link to='/cart' className={`btn btn-success col-4 m-2' ${styles.checkout__link}`}>Checkout</Link>
+                    </div>
+               </div>
           </>
      )
 }

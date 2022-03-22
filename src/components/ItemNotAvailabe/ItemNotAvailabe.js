@@ -7,13 +7,13 @@ const ItemCount = () => {
           <div className={styles.container}>
                {/* <div>
                     <input className={styles.notAvailable_email} placeholder='Enter your email here'></input>
+               </div> */}
+               <div className="row">
+                    {/* <button className={styles.notAvailable_btn}>Email me when it's back</button> */}
+                    <div>
+                         <Link to='/' className={`btn btn-info col m-2' ${styles.back}`}>Back to Catalogue</Link>
+                    </div>
                </div>
-               <div>
-                    <button className={styles.notAvailable_btn}>Email me when it's back</button> */}
-                    <button className={styles.back}>
-                         <Link to='/' className={styles.link__back}>Back to Catalogue</Link>
-                    </button>
-               {/* </div> */}
           </div>
           </>
      )

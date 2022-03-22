@@ -4,7 +4,7 @@ import styles from '../ItemList/ItemList.module.css';
 const ItemList = (props) => {
      return (
           <>
-          <section className={styles.list__container}>
+          <section className={`row m-1 ${styles.list__container}`}>
                {props.items.map(item =>
                <Item
                     key={item.id}
