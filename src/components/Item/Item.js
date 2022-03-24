@@ -6,8 +6,8 @@ const Item = (props) => {
 
      return (
           <>
-          <article className='col-6 col-md-4 col-lg-3 col-xl-2 p-1 mx-1 my-3'>
-               <div className='card'>
+          <article className='card-group col-6 col-md-4 col-lg-3 col-xl-2 p-1 mx-1 my-3'>
+               <div className='card h-100'>
                     <Link to={`/item/${props.id}`}>
                          <img className='card-img-top' src={props.pictureUrl} width={props.cover_size} alt='cover'></img>
                     </Link>
@@ -23,7 +23,7 @@ const Item = (props) => {
                                    : <p><strong>Not Available</strong></p>
                               }
                          </div>
-                         <div className={`card-bottom ${styles.comic__link}`}>
+                         <div className={`card-footer ${styles.comic__link}`}>
                               <Link className={`btn btn-dark ${styles.comic__link}`} to={`/item/${props.id}`}>See the precious</Link>
                          </div>
                     </div>

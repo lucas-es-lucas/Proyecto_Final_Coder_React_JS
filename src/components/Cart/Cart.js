@@ -9,45 +9,60 @@ const Cart = () => {
      return (
           <>
                <section>
-                    <h1>This is your cart!</h1>
-                    <article className={styles.cart__item__container}>
-                         <div className={styles.cart__btn__back}>
-                         <Link to='/' className={`btn btn-info ${styles.cart__link__back}`}>Back to Catalogue</Link>
+                    <article className='row m-3'>
+                         <div className={`btn btn-info col-3 ${styles.cart__btn__back}`}>
+                         <Link to='/' className={`${styles.cart__link__back}`}>Back</Link>
                          </div>
                          {
                               (cartList.cartList.length > 0)
-                              ? <div className={`btn btn-danger col-2 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
+                              ? <div className={`btn btn-danger offset-6 col-3 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
                               : <h5>Your cart is empty :/</h5>
                          }
                     </article>
                     {
                          (cartList.cartList.length > 0)
                          ?
-                         <article className={styles.cart__item__container}>
-                              <span>Code</span>
-                              <span>Cover</span>
-                              <span>Title</span>
-                              <span>Qty</span>
-                              <span>$</span>
-                              <span>Subtotal</span>
-                              <span></span>
-                         </article>
-                         : <h3> </h3>                    
-                    }
-
-                    {
-                         (cartList.cartList.length > 0)
-                         ?
                          cartList.cartList.map(item =>
-                         <article key={item.id} className={styles.cart__item__container}>
-                              <p>{item.id}</p>
-                              <img className={styles.cart__item__cover} src={item.image} width={item.image_size}  alt='product_image'></img>
-                              <h4 className={styles.cart__item__title}>{item.name}</h4>
-                              <p className={styles.cart__item__info}>{item.qty}</p>
-                              <p className={styles.cart__item__info}>{item.price}</p>
-                              <p className={styles.cart__item__info}>{item.price * item.qty}</p>
-                              <button onClick={() => cartList.removeItem(item.id)}>Delete</button>
-                         </article>
+                         <>
+                         {/* <article key={item.id} className={`row m-2 card-footer card-header border-dark ${styles.cart__item__container}`}>
+                              <div className="col-2 h-100 m-1">
+                                   <img className="col-12" src={item.image} alt='product_image'></img>
+                              </div>
+                              <div className="col-8">
+                                   <p className="col-12"><em>{item.name}</em></p>
+                                   <div className="row">
+                                        <p className="col-4"><small>$ {item.price}</small></p>
+                                        <p className="col-3"><small>x {item.qty}</small></p>
+                                        <p className="col-5"><small><strong>$ {item.price * item.qty}</strong></small></p>
+                                   </div>
+                                   <div className="row">
+                                        <p className="col-12"><small>code: {item.id}</small></p>
+                                   </div>
+                              </div>
+                              <div className="col-1 m-1">
+                                   <div className="btn btn-danger" onClick={() => cartList.removeItem(item.id)}>X</div>
+                              </div>
+                         </article> */}
+                         <div className="card m-3 border-dark">
+                              <div className="row g-0 m-2">
+                                   <div className="col-2 h-100 m-auto">
+                                        <img src={item.image} className="img-fluid rounded-start" alt='product_image'></img>
+                                   </div>
+                                   <div className="col-7">
+                                        <div className="card-body">
+                                             <h5 className="card-title">{item.name}</h5>
+                                             <p className="card-text"><small>$ {item.price} x {item.qty} units</small></p>
+                                             {/* <p className="card-text"><small className="text-muted">x {item.qty}</small></p> */}
+                                             <p className="card-text"><strong>$ {item.price * item.qty}</strong></p>
+                                             <p className="col-12"><small className="text-muted">Item code: {item.id}</small></p>
+                                        </div>
+                                   </div>
+                                   <div className="col-1 m-auto text-center">
+                                        <div className="btn btn-danger" onClick={() => cartList.removeItem(item.id)}>X</div>
+                                   </div>
+                              </div>
+                         </div>
+                         </>
                          )
                          : <h3> </h3>
                     }
@@ -56,10 +71,9 @@ const Cart = () => {
                     {
                          (cartList.cartList.length > 0)
                          ?
-                         <article className={styles.cart__item__container}>
-                              <h5>TOTAL</h5>
-                              <span>Products {cartList.total_quantity()}</span>
-                              <span>Cost {cartList.total_cost()}</span>
+                         <article className="row m-4">
+                              <div className="card offset-1 col-5 border-dark text-center">Products: <strong>{cartList.total_quantity()} units</strong></div>
+                              <div className="card col-5 border-dark text-center">Total <strong>$ {cartList.total_cost()}</strong></div>
                          </article>
                          : <h3> </h3>
                     }
@@ -68,12 +82,14 @@ const Cart = () => {
                     (cartList.cartList.length > 0)
                     ?
                     <section>
-                         <article className={styles.cart__item__container}>
-                              <div className={styles.cart__btn__back}>
-                              <Link to='/' className={`btn btn-info ${styles.cart__link__back}`}>Back to Catalogue</Link>
+                         <article className='row'>
+                              <div className={`btn btn-success offset-4 col-4 ${styles.cart__btn__buy}`} onClick={cartList.createOrder}>Buy 'em All!</div>
+                         </article>
+                         <article className='row m-3'>
+                              <div className={`btn btn-info col-3 ${styles.cart__btn__back}`}>
+                              <Link to='/' className={styles.cart__link__back}>Back</Link>
                               </div>
-                              <div className={`btn btn-success col-2 ${styles.cart__btn__buy}`} onClick={cartList.createOrder}>Buy 'em All!</div>
-                              <div className={`btn btn-danger col-2 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
+                              <div className={`btn btn-danger offset-6 col-3 ${styles.cart__btn__empty}`} onClick={cartList.clear}>Empty Cart</div>
                          </article>
                     </section>
                     : <h3> </h3>

@@ -6,6 +6,10 @@
      font-weight: bold; 
 }*/
 
+.container {
+     text-align: center;
+}
+
 .checkout__link {
      text-decoration: none;
      font-family: 'Courier New', Courier, monospace;
